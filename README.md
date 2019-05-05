@@ -7,6 +7,7 @@ a = "Go Mf go".split()
 ```
 ### List / Список
 >Набор элементов, следующих в определенном порядке.
+
 ```
 bicycles = [’trek’, ‘cannondale’, ‘redline’]
 print(bicycles[0])
@@ -295,6 +296,32 @@ with open('file.json') as f_obj:
 print(numbers)
 ```
 
+
+#### Tests / Тестирование
+```python
+def get_formatted_name(first, last):
+    full_name = first + ' ' + last
+    return full_name.title
+```
+```python
+import unittest
+
+class NamesTestCase(unittest.TestCase):
+    def test_first_last_name(self):
+        formatted_name = get_formatted_name('janis', 'joplin')
+        self.assertEqual(formatted_name, 'Janis Joplin')
+
+unittest.main()
+```
+
+| Метод    | Использование | 
+|:----------|:--------------|
+| assertEqual(a,b)| Проверяет, что a == b|
+| assertNotEqual(a,b)|  Проверяет, что a != b |
+| assertTrue(x)|  Проверяет, что значение x истинно|
+| assertFalse(a,b)|  Проверяет, что значение x ложно |
+| assertIn(a,b)|  Проверяет, что элемент входит в список |
+| assertNotIn(a,b)|  Проверяет, что элемент не входит в список |
 
 
 
