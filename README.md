@@ -1,6 +1,6 @@
 # Basic Python
 Quick hints:
-```
+```python
 # Список из слов в строке
 a = "Go Mf go".split()
 >> ['Go', 'Mf', 'go']
@@ -59,7 +59,7 @@ print(bicycles[-1]) # Последний элемент массива
     len(cars)
 
 ##### Работа с частью списка, срезы
-```
+```python
 # Элементы 0, 1, 2
 players[0:3]
 # Элементы 1, 2 , 3
@@ -101,7 +101,7 @@ players[-3:]
 
 ### Dictionaries / Словари
 
-```
+```python
 alien = {'color': 'green', 'points': 5}
 new_points = alien['points']
 alien['position'] = (1, 2)
@@ -109,7 +109,7 @@ alien['position'] = (1, 2)
 del alien['points']
 ```
 Перебор словаря
-```
+```python
 for key, value in alien.items():
     ...
 for key in sorted(alien.keys()):
@@ -131,7 +131,7 @@ alien.values()
 ### Functions / Функции
 >Функция - именнованный блок кода, предназначенный для решения одной конкретной задачи.
 
-```
+```python
 def greet_user(name: str = 'User'):
     """Prints simple greeting.""" # <- Строка документации
     print('Hello, ' + name + "!")
@@ -144,7 +144,7 @@ greet_user(name='Tiki')
 #### * и **
 
     names = ['Boris','Anton']
-```
+```python
 def greet_user(names):
     for name in names:
         print('Hello, ' + name + "!")
@@ -156,7 +156,7 @@ greet_user(['a', 'b', 'c'])
 
 ---
 
-```
+```python
 def greet_user(*names):
     for name in names:
         print('Hello, ' + name + "!")
@@ -168,7 +168,7 @@ greet_user('a', 'b', 'c')
 
 ---
 
-```
+```python
 # **
 names = {'Anton': 'Palich', 'aaaaa': 'bbbbbb'}
 
@@ -182,7 +182,7 @@ greet_user(**names)
 
 ### Classes / Классы
 
-```
+```python
 class Dog():
     """Simple dog model."""
 
@@ -206,7 +206,7 @@ bobik.name
 bobik.age
 ```
 #### Наследование
-```
+```python
 class RoboDog(Dog):
     """It's like a normal dog, but..."""
     def __init__(self, name, age, battery_size=70):
@@ -229,7 +229,7 @@ with open('file_name.txt') as file_object:
     print(contents)
 ```
 Чтение по строкам
-```
+```python
 filename = 'file.txt'
 
 with open(filename) as file_object:
@@ -238,7 +238,7 @@ with open(filename) as file_object:
 ```
 
 Создание списка строк по содержимому файла
-```
+```python
 with open(filename) as file_object:
     lines = file_object.readlines()
     for line in lines:
@@ -246,7 +246,7 @@ with open(filename) as file_object:
 ```
 #### Запись файла
 
-```
+```python
 with open('file.txt', 'w') as file_object:
     file_object.write("I love programming.\n")
 ```
@@ -258,7 +258,7 @@ with open('file.txt', 'w') as file_object:
 
 #### Обработка исключений
 
-```
+```python
 try:
     print(5/0)
 except ZeroDivizionError:
@@ -266,7 +266,7 @@ except ZeroDivizionError:
 ```
 
 File Not Found Error
-```
+```python
 try:
     with open('file_name.txt') as file_object:
     contents = file_object.read()
